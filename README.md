@@ -1,10 +1,10 @@
-# 📦 Product Service - Microservicio Reactivo Backend
+# Product Service - Microservicio Reactivo Backend
 
 Microservicio reactivo desarrollado en Java 17 y Spring Boot 3 para la gestión de productos, aplicando programación funcional, arquitectura reactiva de extremo a extremo (Spring WebFlux y Spring Data R2DBC), pruebas unitarias con StepVerifier y WebTestClient, y empaquetamiento en Docker.
 
 ---
 
-## 🛠️ Stack Tecnológico
+## Stack Tecnológico
 
 - **Lenguaje:** Java 17 (Uso de Records, Streams, Lambdas e Inmutabilidad)
 - **Framework:** Spring Boot 3.2.x
@@ -16,7 +16,7 @@ Microservicio reactivo desarrollado en Java 17 y Spring Boot 3 para la gestión 
 
 ---
 
-## 🏛️ Arquitectura y Principios de Diseño
+## Arquitectura y Principios de Diseño
 
 El proyecto sigue una arquitectura limpia por capas y se rige estrictamente bajo los principios SOLID:
 
@@ -33,7 +33,7 @@ El proyecto sigue una arquitectura limpia por capas y se rige estrictamente bajo
 
 ---
 
-## 🚀 Requisitos Previos
+## Requisitos Previos
 
 - **JDK 17 o superior**
 
@@ -61,7 +61,7 @@ El proyecto sigue una arquitectura limpia por capas y se rige estrictamente bajo
 
 ---
 
-## ⚙️ Compilación, Pruebas y Reporte de Cobertura
+## Compilación, Pruebas y Reporte de Cobertura
 
 ### 1. Compilar y ejecutar las Pruebas Unitarias
 Ejecuta el siguiente comando para correr el suite completo de pruebas (`StepVerifier` y `WebTestClient`):
@@ -81,7 +81,7 @@ target/site/jacoco/index.html
 
 ---
 
-## 💻 Ejecución Local (Sin Docker)
+## Ejecución Local (Sin Docker)
 
 Para ejecutar la aplicación localmente sin utilizar Docker, puedes iniciarla directamente con Maven:
 
@@ -93,7 +93,7 @@ El servidor reactivo (Netty) se iniciará en `http://localhost:8080` utilizando 
 
 ---
 
-## 🐳 Ejecución con Docker (Un solo comando)
+## Ejecución con Docker (Un solo comando)
 
 Para levantar la solución completa dentro de un contenedor aislado con Docker Compose:
 
@@ -111,14 +111,14 @@ docker-compose down
 
 ---
 
-## 📡 Ejemplos de Consumo de la API (Postman)
+## Ejemplos de Consumo de la API (Postman)
 
-### 📬 Colección de Postman
+### Colección de Postman
 En la raíz del proyecto se incluye el archivo `IDM-Reto-Jvasquez.postman_collection.json` listo para importar directamente en Postman. Incluye todas las peticiones para probar los endpoints funcionales (GET, POST, PUT, DELETE, Manejo de Errores y Streaming SSE).
 
 ---
 
-## 📄 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```plaintext
 product-service/
