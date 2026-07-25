@@ -35,9 +35,29 @@ El proyecto sigue una arquitectura limpia por capas y se rige estrictamente bajo
 
 ## 🚀 Requisitos Previos
 
-- JDK 17 o superior
-- Apache Maven 3.8+
-- Docker & Docker Compose (para ejecución contenerizada)
+- **JDK 17 o superior**
+
+  **Instalación de Java 17:**
+  
+  - **Windows (Winget):**
+    ```powershell
+    winget install EclipseAdoptium.Temurin.17.JDK
+    ```
+  - **Linux / macOS (SDKMAN!):**
+    ```bash
+    sdk install java 17.0.10-tem
+    ```
+  - **Ubuntu / Debian (APT):**
+    ```bash
+    sudo apt update && sudo apt install openjdk-17-jdk -y
+    ```
+  - **macOS (Homebrew):**
+    ```bash
+    brew install openjdk@17
+    ```
+
+- **Apache Maven 3.8+**
+- **Docker & Docker Compose** (para ejecución contenerizada)
 
 ---
 
@@ -58,6 +78,18 @@ target/site/jacoco/index.html
 ```
 
 > **Nota de Calidad:** La configuración de JaCoCo en el `pom.xml` exige un mínimo del 70% de cobertura en las clases de servicio para dar por exitosa la fase de prueba.
+
+---
+
+## 💻 Ejecución Local (Sin Docker)
+
+Para ejecutar la aplicación localmente sin utilizar Docker, puedes iniciarla directamente con Maven:
+
+```bash
+mvn spring-boot:run
+```
+
+El servidor reactivo (Netty) se iniciará en `http://localhost:8080` utilizando la base de datos H2 en memoria inicializada por el script `schema.sql`.
 
 ---
 
