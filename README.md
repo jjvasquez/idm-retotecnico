@@ -111,63 +111,10 @@ docker-compose down
 
 ---
 
-## 📡 Ejemplos de Consumo de la API (cURL)
+## 📡 Ejemplos de Consumo de la API (Postman)
 
-### 1. Listar todos los productos (GET) — Event Streaming SSE / JSON
-```bash
-curl -N -X GET http://localhost:8080/api/products -H "Accept: text/event-stream"
-```
-
-### 2. Obtener producto por ID (GET /{id})
-```bash
-curl -X GET http://localhost:8080/api/products/1
-```
-
-### 3. Crear un nuevo producto (POST)
-```bash
-curl -X POST http://localhost:8080/api/products \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "Teclado Mecánico RGB",
-    "description": "Switch Red, conector USB-C",
-    "price": 89.99,
-    "stock": 20,
-    "status": "ACTIVE"
-  }'
-```
-
-### 4. Actualizar un producto existente (PUT /{id})
-```bash
-curl -X PUT http://localhost:8080/api/products/1 \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "Teclado Mecánico RGB Pro",
-    "description": "Switch Red Inalámbrico",
-    "price": 109.99,
-    "stock": 15,
-    "status": "ACTIVE"
-  }'
-```
-
-### 5. Eliminar un producto (DELETE /{id})
-```bash
-curl -X DELETE -i http://localhost:8080/api/products/1
-```
-
-### 6. Probar Manejo de Errores Reactivo (404 Not Found)
-```bash
-curl -X GET http://localhost:8080/api/products/999
-```
-
-**Respuesta:**
-```json
-{
-  "timestamp": "2026-07-24T17:00:00.000",
-  "status": 404,
-  "error": "Not Found",
-  "message": "Producto no encontrado con el id: 999"
-}
-```
+### 📬 Colección de Postman
+En la raíz del proyecto se incluye el archivo `IDM-Reto-Jvasquez.postman_collection.json` listo para importar directamente en Postman. Incluye todas las peticiones para probar los endpoints funcionales (GET, POST, PUT, DELETE, Manejo de Errores y Streaming SSE).
 
 ---
 
@@ -203,6 +150,7 @@ product-service/
 │           └── service/ProductServiceImplTest.java
 ├── Dockerfile
 ├── docker-compose.yml
+├── IDM-Reto-Jvasquez.postman_collection.json
 ├── pom.xml
 └── README.md
 ```
